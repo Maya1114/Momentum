@@ -22,7 +22,6 @@ import {
 } from "./ui/dialog";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import {
-  Plus,
   Play,
   ExternalLink,
   Github,
@@ -44,7 +43,6 @@ interface ProjectsProps {
 export function Projects({
   projects,
   onEditProject,
-  onUnpublishProject,
 }: ProjectsProps) {
   const [searchTerm, setSearchTerm] = useState("");
 
