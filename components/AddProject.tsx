@@ -127,8 +127,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Basic Project Info */}
             <div className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="title">Project Title *</Label>
+              <div className="space-y-2 text-muted-foreground">
+                <Label htmlFor="title" className="text-white">Project Title *</Label>
                 <Input
                   id="title"
                   value={formData.title}
@@ -140,8 +140,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="description">Description</Label>
+              <div className="space-y-2 text-muted-foreground">
+                <Label htmlFor="description" className="text-white">Description</Label>
                 <Textarea
                   id="description"
                   value={formData.description}
@@ -157,8 +157,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="category">Category *</Label>
+                <div className="space-y-2 text-muted-foreground">
+                  <Label htmlFor="category" className="text-white">Category *</Label>
                   <Select
                     value={formData.category}
                     onValueChange={(value) =>
@@ -180,8 +180,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                   </Select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="status">Status</Label>
+                <div className="space-y-2 text-muted-foreground">
+                  <Label htmlFor="status" className="text-white">Status</Label>
                   <Select
                     value={formData.status}
                     onValueChange={(value: any) =>
@@ -201,8 +201,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="startDate">Start Date</Label>
+                <div className="space-y-2 text-muted-foreground">
+                  <Label htmlFor="startDate" className="text-white">Start Date</Label>
                   <Input
                     id="startDate"
                     type="date"
@@ -216,8 +216,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="deadline">Deadline (Optional)</Label>
+                <div className="space-y-2 text-muted-foreground">
+                  <Label htmlFor="deadline" className="text-white">Deadline (Optional)</Label>
                   <Input
                     id="deadline"
                     type="date"
