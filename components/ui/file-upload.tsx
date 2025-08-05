@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Upload, X, Image as ImageIcon } from "lucide-react";
+import { Upload, X } from "lucide-react";
 import { Button } from "./button";
 import { Label } from "./label";
 import { cn } from "./utils";
@@ -20,8 +20,7 @@ export function FileUpload({
   value,
   onChange,
   accept = "image/*",
-  className,
-  placeholder = "Upload an image or enter a URL"
+  className
 }: FileUploadProps) {
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const [dragActive, setDragActive] = React.useState(false);
