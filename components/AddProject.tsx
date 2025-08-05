@@ -127,7 +127,7 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Basic Project Info */}
             <div className="space-y-4">
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-black">
                 <Label htmlFor="title" className="text-white">Project Title *</Label>
                 <Input
                   id="title"
@@ -140,7 +140,7 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                 />
               </div>
 
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-black">
                 <Label htmlFor="description" className="text-white">Description</Label>
                 <Textarea
                   id="description"
@@ -157,7 +157,7 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2 text-muted-foreground">
+                <div className="space-y-2 text-black">
                   <Label htmlFor="category" className="text-white">Category *</Label>
                   <Select
                     value={formData.category}
@@ -180,7 +180,7 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                   </Select>
                 </div>
 
-                <div className="space-y-2 text-muted-foreground">
+                <div className="space-y-2 text-black  ">
                   <Label htmlFor="status" className="text-white">Status</Label>
                   <Select
                     value={formData.status}
@@ -201,7 +201,7 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2 text-muted-foreground">
+                <div className="space-y-2 text-black">
                   <Label htmlFor="startDate" className="text-white">Start Date</Label>
                   <Input
                     id="startDate"
@@ -216,7 +216,7 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                   />
                 </div>
 
-                <div className="space-y-2 text-muted-foreground">
+                <div className="space-y-2 text-black">
                   <Label htmlFor="deadline" className="text-white">Deadline (Optional)</Label>
                   <Input
                     id="deadline"
@@ -232,8 +232,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="dailyGoal">Daily Goal (Optional)</Label>
+              <div className="space-y-2 text-black">
+                <Label htmlFor="dailyGoal" className="text-white">Daily Goal (Optional)</Label>
                 <Input
                   id="dailyGoal"
                   value={formData.dailyGoal}
@@ -262,12 +262,12 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
+                <div className="space-y-2 text-black">
                   <Label
                     htmlFor="githubUrl"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 text-white"
                   >
-                    <Github className="h-4 w-4" />
+                    <Github className="h-4 w-4 text-white" />
                     GitHub URL
                   </Label>
                   <Input
@@ -283,8 +283,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="demoUrl" className="flex items-center gap-2">
+                <div className="space-y-2 text-black">
+                  <Label htmlFor="demoUrl" className="flex items-center gap-2 text-white">
                     <ExternalLink className="h-4 w-4" />
                     Demo URL
                   </Label>
@@ -302,8 +302,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="showcaseDescription">
+              <div className="space-y-2 text-black">
+                <Label htmlFor="showcaseDescription" className="text-white">
                   Showcase Description
                 </Label>
                 <Textarea
@@ -320,8 +320,8 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label className="flex items-center gap-2">
+              <div className="space-y-2 text-black">
+                <Label className="flex items-center gap-2 text-white">
                   Key Features
                   <Button
                     type="button"
