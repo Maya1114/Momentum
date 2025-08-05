@@ -194,7 +194,6 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
                       <SelectItem value="planning">Planning</SelectItem>
                       <SelectItem value="in-progress">In Progress</SelectItem>
                       <SelectItem value="completed">Completed</SelectItem>
-                      <SelectItem value="paused">Paused</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

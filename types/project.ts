@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  status: 'planning' | 'in-progress' | 'completed' | 'paused';
+  status: 'planning' | 'in-progress' | 'completed';
   progress: number;
   startDate: string;
   deadline?: string;

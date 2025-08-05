@@ -21,18 +21,13 @@ const statusConfig = {
   'completed': {
     color: 'bg-green-500/10 text-green-600 border-green-500/20',
     dot: 'bg-green-500'
-  },
-  'paused': {
-    color: 'bg-gray-500/10 text-gray-600 border-gray-500/20',
-    dot: 'bg-gray-500'
   }
 };
 
 const statusLabels = {
   'planning': 'Planning',
   'in-progress': 'In Progress',
-  'completed': 'Completed',
-  'paused': 'Paused'
+  'completed': 'Completed'
 };
 
 export function ProjectTimeline({ projects, onEditProject }: ProjectTimelineProps) {
