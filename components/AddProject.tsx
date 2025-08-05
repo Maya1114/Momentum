@@ -13,6 +13,7 @@ import {
 } from "./ui/select";
 import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
+import { FileUpload } from "./ui/file-upload";
 import { X, Plus, Trash2, Github, ExternalLink } from "lucide-react";
 import { Project } from "../types/project";
 
@@ -357,19 +358,17 @@ export const AddProject = forwardRef<AddProjectRef, AddProjectProps>(
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="showcaseImage">
-                  Showcase Image URL (Optional)
-                </Label>
-                <Input
+                <FileUpload
                   id="showcaseImage"
+                  label="Showcase Image URL (Optional)"
                   value={formData.showcaseImage}
-                  onChange={(e) =>
+                  onChange={(value) =>
                     setFormData((prev) => ({
                       ...prev,
-                      showcaseImage: e.target.value,
+                      showcaseImage: value || "",
                     }))
                   }
-                  placeholder="https://example.com/project-screenshot.png"
+                  placeholder="Upload an image or enter a URL"
                 />
               </div>
             </div>

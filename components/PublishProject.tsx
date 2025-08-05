@@ -9,6 +9,7 @@ import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { ScrollArea } from "./ui/scroll-area";
 import { motion } from "motion/react";
+import { FileUpload } from "./ui/file-upload";
 import { Plus, Trash2, Github, ExternalLink, Eye, Sparkles, CheckCircle2 } from "lucide-react";
 
 interface PublishProjectProps {
@@ -118,7 +119,7 @@ export function PublishProject({ project, isOpen, onClose, onPublish }: PublishP
             {/* Portfolio Showcase Fields */}
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
+                <div className="space-y-2 text-black">
                   <Label htmlFor="publish-githubUrl" className="flex items-center gap-2 text-black">
                     <Github className="h-4 w-4" />
                     GitHub URL
@@ -131,7 +132,7 @@ export function PublishProject({ project, isOpen, onClose, onPublish }: PublishP
                   />
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 text-black">
                   <Label htmlFor="publish-demoUrl" className="flex items-center gap-2 text-black">
                     <ExternalLink className="h-4 w-4" />
                     Live Demo URL
@@ -172,7 +173,7 @@ export function PublishProject({ project, isOpen, onClose, onPublish }: PublishP
                     <Plus className="h-3 w-3" />
                   </Button>
                 </Label>
-                <div className="space-y-2">
+                <div className="space-y-2 text-black">
                   {(formData.showcaseFeatures || ['']).map((feature, index) => (
                     <div key={index} className="flex gap-2">
                       <Input
@@ -200,12 +201,12 @@ export function PublishProject({ project, isOpen, onClose, onPublish }: PublishP
               </div>
 
               <div className="space-y-2 text-black">
-                <Label htmlFor="publish-showcaseImage">Project Screenshot URL (Optional)</Label>
-                <Input
+                <FileUpload
                   id="publish-showcaseImage"
-                  value={formData.showcaseImage || ''}
-                  onChange={(e) => setFormData(prev => prev ? { ...prev, showcaseImage: e.target.value || undefined } : null)}
-                  placeholder="https://example.com/project-screenshot.png"
+                  label="Project Screenshot (Optional)"
+                  value={formData.showcaseImage}
+                  onChange={(value) => setFormData(prev => prev ? { ...prev, showcaseImage: value } : null)}
+                  placeholder="Upload an image or enter a URL"
                 />
                 <p className="text-xs text-muted-foreground">
                   Add a screenshot or demo image to make your project stand out

@@ -11,6 +11,7 @@ import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { ScrollArea } from "./ui/scroll-area";
 import { Alert, AlertDescription } from "./ui/alert";
+import { FileUpload } from "./ui/file-upload";
 import { Plus, Trash2, Github, ExternalLink, EyeOff, Sparkles } from "lucide-react";
 
 interface EditProjectProps {
@@ -303,12 +304,12 @@ export function EditProject({ project, isOpen, onClose, onSave, onDelete }: Edit
               </div>
 
               <div className="space-y-2 text-black">
-                <Label htmlFor="edit-showcaseImage">Showcase Image URL (Optional)</Label>
-                <Input
+                <FileUpload
                   id="edit-showcaseImage"
-                  value={formData.showcaseImage || ''}
-                  onChange={(e) => setFormData(prev => prev ? { ...prev, showcaseImage: e.target.value || undefined } : null)}
-                  placeholder="https://example.com/project-screenshot.png"
+                  label="Showcase Image (Optional)"
+                  value={formData.showcaseImage}
+                  onChange={(value) => setFormData(prev => prev ? { ...prev, showcaseImage: value } : null)}
+                  placeholder="Upload an image or enter a URL"
                 />
               </div>
             </div>

@@ -463,7 +463,7 @@ export function Projects({
                           className="flex-1 gap-1 bg-green-600 hover:bg-green-700"
                         >
                           <Play className="h-3 w-3" />
-                          View Demo
+                          View
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="max-w-4xl max-h-[85vh] overflow-auto">
