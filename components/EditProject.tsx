@@ -238,7 +238,7 @@ export function EditProject({ project, isOpen, onClose, onSave, onDelete }: Edit
                   />
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 text-black">
                   <Label htmlFor="edit-demoUrl" className="flex items-center gap-2 text-black">
                     <ExternalLink className="h-4 w-4" />
                     Demo URL
