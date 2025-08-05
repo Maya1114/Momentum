@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Project } from "../types/project";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { Calendar, Clock, Play, Edit } from "lucide-react";
+import { Calendar, Clock, Edit } from "lucide-react";
 
 interface ProjectTimelineProps {
   projects: Project[];

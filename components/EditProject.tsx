@@ -11,7 +11,7 @@ import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { ScrollArea } from "./ui/scroll-area";
 import { Alert, AlertDescription } from "./ui/alert";
-import { Plus, Trash2, Github, ExternalLink, Eye, EyeOff, Sparkles } from "lucide-react";
+import { Plus, Trash2, Github, ExternalLink, EyeOff, Sparkles } from "lucide-react";
 
 interface EditProjectProps {
   project: Project | null;
